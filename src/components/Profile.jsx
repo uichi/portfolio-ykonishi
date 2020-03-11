@@ -1,60 +1,75 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Helmet from 'react-helmet';
-import profileImage from '../assets/images/sample.png';
 
 const Profile = () => {
+  const [profile, setProfile] = useState({
+    image: '',
+    name: '',
+    job: '',
+    email: '',
+    technologies: [],
+    biography: ''
+  })
+
+  useEffect(() => {
+    fetch('https://ykonishi.microcms.io/api/v1/profile', {
+      headers: {
+        'X-API-KEY': ''
+      },
+    })
+    .then(res => res.json())
+    .then(res => setProfile(res))
+    .catch(error => {
+      console.log(error)
+    })
+  }, [profile]);
   return (
     <>
       <Helmet>
         <title>Profile | Yuichi Konishi</title>
       </Helmet>
-      <div class="wrapper">
+      <div className="wrapper">
         <header>
-          <h1 class="page-title">Profile</h1>
+          <h1 className="page-title">Profile</h1>
         </header>
         <main>
-          <div class="profile">
-            <figure class="profile__figure profile-figure">
-              <img src={profileImage} class="profile-figure__image" />
+          <div className="profile">
+            <figure className="profile__figure profile-figure">
+              <img src={profile.image.url} className="profile-figure__image" alt="profile img" />
             </figure>
-            <div class="profile__name">
-              <span class="profile-title">Name<span class="colon">:</span></span>
-              <span>Yuichi Konishi</span>
+            <div className="profile__name">
+              <span className="profile-title">Name<span className="colon">:</span></span>
+              <span>{profile.name}</span>
             </div>
-            <div class="profile__job">
-              <span class="job-title">Job<span class="colon job">:</span></span>
-              <span>Webエンジニア</span>
+            <div className="profile__job">
+              <span className="job-title">Job<span className="colon job">:</span></span>
+              <span>{profile.job}</span>
             </div>
-            <div class="profile__email">
-              <span class="email-title">Email<span class="colon email">:</span></span>
-              <span>curry_and_coffee@ykonishi.tokyo</span>
+            <div className="profile__email">
+              <span className="email-title">Email<span className="colon email">:</span></span>
+              <span>{profile.email}</span>
             </div>
-            <div class="profile__skill">
-              <div class="skill-title">Skill<span class="colon skill">:</span></div>
-              <ul class="skill-list">
-                <li class="skill-list__item">React</li>
-                <li class="skill-list__item">Redux</li>
-                <li class="skill-list__item">Material UI</li>
-                <li class="skill-list__item">Semantic UI</li>
-                <li class="skill-list__item">CoffeeScript</li>
-                <li class="skill-list__item">SCSS</li>
-                <li class="skill-list__item">jQuery</li>
-                <li class="skill-list__item">Django</li>
-                <li class="skill-list__item">CakePHP2</li>
-                <li class="skill-list__item">CakePHP3</li>
-                <li class="skill-list__item">知的財産管理技能士</li>
+            <div className="profile__skill">
+              <div className="skill-title">Skill<span className="colon skill">:</span></div>
+              <ul className="skill-list">
+                {profile.technologies.map((technology, index) => {
+                  return  (
+                    <li key={index} className="skill-list__item">{technology.name}</li>
+                  )
+                })}
               </ul>
             </div>
-            <div class="profile__biography">
-              <div class="biography-title">Biography</div>
-              <p>大学4年のときに、1年間のWebエンジニアのインターンを経て、卒業後もWebエンジニアの道に進んだ。</p>
-              <p>これまでに携わった技術は数多く、CMS、フルスタックWebフレームワーク、サーバーレスなどWeb開発技術を網羅的に経験してきた。</p>
-              <p>バックエンドからフロントエンド、時にはインフラを担当することもあり各分野をフレキシブルに対応できる。</p>
-              <p>さらに、クライアントからの要求に対する要件定義や技術提案などの経験もあり、上流工程から下流工程までもが対応可能。</p>
+            <div className="profile__biography">
+              <div className="biography-title">Biography</div>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: profile.biography
+                }}
+              />
             </div>
           </div>
         </main>
-        <footer class="footer">
+        <footer className="footer">
           <small>&copy; Yuichi Konishi</small>
         </footer>
       </div>
