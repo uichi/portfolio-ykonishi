@@ -12,9 +12,11 @@ const Profile = () => {
   })
 
   useEffect(() => {
-    fetch('https://ykonishi.microcms.io/api/v1/profile', {
+    const url = new URL(process.env.REACT_APP_MICRO_CMS_API_URL);
+    url.pathname = '/api/v1/profile'
+    fetch(url, {
       headers: {
-        'X-API-KEY': ''
+        'X-API-KEY': process.env.REACT_APP_MICRO_CMS_API_KEY
       },
     })
     .then(res => res.json())
@@ -22,7 +24,8 @@ const Profile = () => {
     .catch(error => {
       console.log(error)
     })
-  }, [profile]);
+  }, []);
+  
   return (
     <>
       <Helmet>
