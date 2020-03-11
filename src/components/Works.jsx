@@ -7,72 +7,72 @@ const Works = () => {
       <Helmet>
         <title>Works | Yuichi Konishi</title>
       </Helmet>
-      <div class="wrapper">
+      <div className="wrapper">
         <header>
-          <h1 class="page-title">Works</h1>
+          <h1 className="page-title">Works</h1>
         </header>
-        <main class="main">
-          <div class="work">
-            <figure class="work__figure">
-              <img src="./images/daifuku.png" class="work__image" />
+        <main className="main">
+          <div className="work">
+            <figure className="work__figure">
+              <img src="./images/daifuku.png" className="work__image" />
             </figure>
-            <h2 class="work__title">DAIFUKU</h2>
-            <div class="work__role">
-              <span class="role-title">Role<span class="colon">:</span></span>
-              <ul class="role-list">
-                <li class="role-list__item">フロントエンド</li>
-                <li class="role-list__item">バックエンド</li>
-                <li class="role-list__item">インフラ</li>
+            <h2 className="work__title">DAIFUKU</h2>
+            <div className="work__role">
+              <span className="role-title">Role<span className="colon">:</span></span>
+              <ul className="role-list">
+                <li className="role-list__item">フロントエンド</li>
+                <li className="role-list__item">バックエンド</li>
+                <li className="role-list__item">インフラ</li>
               </ul>
             </div>
-            <div class="work__technologies">
-              <span class="technology-title">Tech<span class="colon">:</span></span>
-              <ul class="technology-list">
-                <li class="technology-list__item">Django</li>
-                <li class="technology-list__item">Semantic UI</li>
-                <li class="technology-list__item">Ubuntu</li>
-                <li class="technology-list__item">MariaDB</li>
-                <li class="technology-list__item">Nginx</li>
-                <li class="technology-list__item">uWSGI</li>
+            <div className="work__technologies">
+              <span className="technology-title">Tech<span className="colon">:</span></span>
+              <ul className="technology-list">
+                <li className="technology-list__item">Django</li>
+                <li className="technology-list__item">Semantic UI</li>
+                <li className="technology-list__item">Ubuntu</li>
+                <li className="technology-list__item">MariaDB</li>
+                <li className="technology-list__item">Nginx</li>
+                <li className="technology-list__item">uWSGI</li>
               </ul>
             </div>
-            <div class="work__assign-term">
-              <span class="assign-term-title">Term<span class="colon">:</span></span>
-              <span class="">2019 / 01 / 01 ~</span>
+            <div className="work__assign-term">
+              <span className="assign-term-title">Term<span className="colon">:</span></span>
+              <span className="">2019 / 01 / 01 ~</span>
             </div>
-            <a href="https://daihuku.xyz" class="work__link">
+            <a href="https://daihuku.xyz" className="work__link">
               visit site
             </a>
           </div>
-          <div class="work">
-            <figure class="work__figure">
-              <img src="./images/daifuku.png" class="work__image" />
+          <div className="work">
+            <figure className="work__figure">
+              <img src="./images/daifuku.png" className="work__image" />
             </figure>
-            <h2 class="work__title">DAIFUKU</h2>
-            <div class="work__role">
-              <span class="role-title">Role<span class="colon">:</span></span>
-              <ul class="role-list">
-                <li class="role-list__item">フロントエンド</li>
-                <li class="role-list__item">バックエンド</li>
-                <li class="role-list__item">インフラ</li>
+            <h2 className="work__title">DAIFUKU</h2>
+            <div className="work__role">
+              <span className="role-title">Role<span className="colon">:</span></span>
+              <ul className="role-list">
+                <li className="role-list__item">フロントエンド</li>
+                <li className="role-list__item">バックエンド</li>
+                <li className="role-list__item">インフラ</li>
               </ul>
             </div>
-            <div class="work__technologies">
-              <span class="technology-title">Tech<span class="colon">:</span></span>
-              <ul class="technology-list">
-                <li class="technology-list__item">Django</li>
-                <li class="technology-list__item">Semantic UI</li>
-                <li class="technology-list__item">Ubuntu</li>
-                <li class="technology-list__item">MariaDB</li>
-                <li class="technology-list__item">Nginx</li>
-                <li class="technology-list__item">uWSGI</li>
+            <div className="work__technologies">
+              <span className="technology-title">Tech<span className="colon">:</span></span>
+              <ul className="technology-list">
+                <li className="technology-list__item">Django</li>
+                <li className="technology-list__item">Semantic UI</li>
+                <li className="technology-list__item">Ubuntu</li>
+                <li className="technology-list__item">MariaDB</li>
+                <li className="technology-list__item">Nginx</li>
+                <li className="technology-list__item">uWSGI</li>
               </ul>
             </div>
-            <div class="work__assign-term">
-              <span class="assign-term-title">Term<span class="colon">:</span></span>
-              <span class="">2019 / 01 / 01 ~</span>
+            <div className="work__assign-term">
+              <span className="assign-term-title">Term<span className="colon">:</span></span>
+              <span className="">2019 / 01 / 01 ~</span>
             </div>
-            <a href="https://daihuku.xyz" class="work__link">
+            <a href="https://daihuku.xyz" className="work__link">
               visit site
             </a>
           </div>
