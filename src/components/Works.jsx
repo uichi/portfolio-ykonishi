@@ -29,9 +29,20 @@ const Works = () => {
           <h1 className="page-title">Works</h1>
         </header>
         <main className="main">
-          {works.map(work => {
+          {works.map((work, index) => {
+            const startDateObject = new Date(work.startDate);
+            let workTerm = startDateObject.getFullYear() + ' / ' +
+            ('0' + (startDateObject.getMonth() + 1)).slice(-2) + ' / ' +
+            ('0' + startDateObject.getDate()).slice(-2) + ' ~ ';
+            if(!!work.endDate) {
+              const endDateObject = new Date(work.startDate);
+              workTerm = workTerm +
+              endDateObject.getFullYear() + ' / ' +
+              ('0' + (endDateObject.getMonth() + 1)).slice(-2) + ' / ' +
+              ('0' + endDateObject.getDate()).slice(-2);
+            }
             return (
-              <div key={work} className="work">
+              <div key={index} className="work">
                 <figure className="work__figure">
                   <img src={work.image.url} className="work__image" alt="実績の画像" />
                 </figure>
@@ -58,7 +69,7 @@ const Works = () => {
                 </div>
                 <div className="work__assign-term">
                   <span className="assign-term-title">Term<span className="colon">:</span></span>
-                  <span className="">{work.startDate}</span>
+                  <span className="">{workTerm}</span>
                 </div>
                 <a href="https://daihuku.xyz" className="work__link" rel="noreferrer noopener" target="_blank">
                   visit site
