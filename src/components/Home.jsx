@@ -13,7 +13,9 @@ const Home = () => {
         <header>
           <nav className="navigation">
             <ul className="navigation__list list">
-              <li className="list__item"><a className="glitch" data-text="Home" href="./index.html">Home</a></li>
+              <li className="list__item">
+                <Link className="glitch" data-text="Home" to="/">Home</Link>
+                </li>
               <li className="list__item">
                 <Link className="glitch" data-text="Profile" to="/profile">Profile</Link>
               </li>
