@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import Helmet from 'react-helmet';
-import useReactRouter from 'use-react-router';
 import Footer from './footer';
 
-const Works = () => {
-  const { history } = useReactRouter();
+const SecretWorks = () => {
   const [works, setWorks] = useState([]);
-  const [password, setPassword] = useState('');
 
   useEffect(() => {
     const url = new URL(process.env.REACT_APP_MICRO_CMS_API_URL);
-    url.pathname = '/api/v1/works'
+    url.pathname = '/api/v1/secret-works'
     fetch(url, {
       headers: {
         'X-API-KEY': process.env.REACT_APP_MICRO_CMS_API_KEY
@@ -22,11 +19,6 @@ const Works = () => {
       console.log(error)
     })
   }, []);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    history.push('works/' + password);
-  }
 
   return (
     <>
@@ -87,18 +79,11 @@ const Works = () => {
               </div>
             )
           })}
-          <form className="secret-works-form" onSubmit={handleSubmit}>
-            <h2 className="secret-works-form__title">業務実績を閲覧する</h2>
-            <div className="input-field">
-              <input className="input-field__password" type="text" placeholder="パスワードを入力" onChange={ e => setPassword(e.target.value) } />
-              <button className="input-field__button" type="submit">送信</button>
-            </div>
-          </form>
         </main>
       </div>
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Works;
+export default SecretWorks;

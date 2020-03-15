@@ -99,11 +99,14 @@ header > .navigation > ul > li > a {
 }
 
 /* Works */
-
-.work {
-  margin: 0 auto 100px;
+.works {
+  margin: 0 auto 0;
   width: 80vw;
   max-width: 768px
+}
+
+.work {
+  margin-bottom: 100px;
 }
 
 .work__figure {
@@ -118,7 +121,7 @@ header > .navigation > ul > li > a {
 .work__title {
   font-size: 3rem;
   letter-spacing: 0.2rem;
-  margin: 0 0 35px 0;
+  margin: 0 0 20px 0;
   padding: 0;
 }
 
@@ -181,30 +184,88 @@ header > .navigation > ul > li > a {
   display: flex;
   font-size: 1.8rem;
   line-height: 3rem;
-  margin: 0 0 48px 0
+  margin: 0 0 30px 0
 }
 
-.work__link {
-  border: 1px solid white;
+.work__link{
+  border: 2px solid white;
   color: white;
-  display: block;
+  display: inline-block;
   font-size: 1.2rem;
   letter-spacing: 0.45rem;
+  overflow: hidden;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.2s linear;
   text-align: center;
   text-decoration: none;
-  transition: 0.5s;
+  transition: all 0.2s linear;
+  position: relative;
+  width: 100%;
   padding-top: 10px;
-  padding-bottom: 10px
+  padding-bottom: 10px;
+  margin: 0 0 20px 0;
 }
 
-.work__link:hover {
+.work__link:before{
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  background-color: white;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.work__link:hover{
+  color: royalblue;
+}
+
+.work__link:hover:before{
+  left: 0;
+}
+
+.secret-works-form {
+  margin: 0 0 50px 0;
+}
+
+.secret-works-form__title {
+  margin: 0 0 20px 0;
+}
+
+.input-field {
+  display: flex;
+}
+
+.input-field__password {
   background: white;
-  color: #111;
-  transition: 0.5s
+  border: none;
+  border-radius: 0;
+  height: 50px;
+  outline: none;
+  padding: 0 0 0 10px;
+  width: 80%;
+}
+
+.input-field__button {
+  background: royalblue;
+  border: none;
+  border-radius: 0;
+  color: #fff;
+  outline: none;
+  height: 50px;
+  width: 20%;
+}
+
+.input-field__button:hover {
+  cursor: pointer;
 }
 
 @media( max-width: 768px ) {
-  .work {
+  .works {
     margin-bottom: 80px;
   }
 
@@ -235,10 +296,32 @@ header > .navigation > ul > li > a {
   .work__link {
     font-size: 1rem
   }
+
+  .work__link{
+    overflow: hidden;
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+  }
+
+  .work__link:before{
+    background-color: white;
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+  }
+
+  .input-field__password {
+    font-size: 16px;
+  }
+
+  .input-field__button {
+    font-size: 16px;
+  }
 }
 
 @media( max-width: 425px ) {
-  .work {
+  .works {
     margin-bottom: 60px;
     width: 90vw
   }
@@ -340,7 +423,7 @@ header > .navigation > ul > li > a {
   content: '/';
   margin: 0 3px 0 6px
 }
-
+linear
 .biography-title {
   border-bottom: 1px solid white;
   font-size: 2.2rem;
