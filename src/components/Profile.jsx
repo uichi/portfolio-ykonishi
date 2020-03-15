@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Helmet from 'react-helmet';
+import Menu from './Menu';
+import Footer from './Footer';
 
 const Profile = () => {
   const [profile, setProfile] = useState({
@@ -9,7 +11,7 @@ const Profile = () => {
     email: '',
     technologies: [],
     biography: ''
-  })
+  });
 
   useEffect(() => {
     const url = new URL(process.env.REACT_APP_MICRO_CMS_API_URL);
@@ -25,13 +27,14 @@ const Profile = () => {
       console.log(error)
     })
   }, []);
-  
+
   return (
     <>
       <Helmet>
         <title>Profile | Yuichi Konishi</title>
       </Helmet>
       <div className="wrapper">
+        <Menu />
         <header>
           <h1 className="page-title">Profile</h1>
         </header>
@@ -72,10 +75,8 @@ const Profile = () => {
             </div>
           </div>
         </main>
-        <footer className="footer">
-          <small>&copy; Yuichi Konishi</small>
-        </footer>
       </div>
+      <Footer />
     </>
   )
 }

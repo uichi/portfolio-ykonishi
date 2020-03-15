@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Helmet from 'react-helmet';
 import useReactRouter from 'use-react-router';
-import Footer from './footer';
+import Menu from './Menu';
+import Footer from './Footer';
 
 const Works = () => {
   const { history } = useReactRouter();
@@ -34,6 +35,7 @@ const Works = () => {
         <title>Works | Yuichi Konishi</title>
       </Helmet>
       <div className="wrapper">
+        <Menu />
         <header>
           <h1 className="page-title">Works</h1>
         </header>
