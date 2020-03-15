@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Helmet from 'react-helmet';
-import Footer from './footer';
+import Menu from './Menu';
+import Footer from './Footer';
 
 const SecretWorks = () => {
   const [works, setWorks] = useState([]);
@@ -26,6 +27,7 @@ const SecretWorks = () => {
         <title>Works | Yuichi Konishi</title>
       </Helmet>
       <div className="wrapper">
+        <Menu />
         <header>
           <h1 className="page-title">Works</h1>
         </header>
