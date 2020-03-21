@@ -24,7 +24,7 @@ const SecretWorks = () => {
   const RenderLink = ({link}) => {
     if (!link) return <></>;
     return (
-      <a href="{work.link}" className="work__link" rel="noreferrer noopener" target="_blank">
+      <a href={link} className="work__link" rel="noreferrer noopener" target="_blank">
         visit site
       </a>
     );
