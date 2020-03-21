@@ -21,6 +21,15 @@ const SecretWorks = () => {
     })
   }, []);
 
+  const RenderLink = ({link}) => {
+    if (!link) return <></>;
+    return (
+      <a href="{work.link}" className="work__link" rel="noreferrer noopener" target="_blank">
+        visit site
+      </a>
+    );
+  };
+
   return (
     <>
       <Helmet>
@@ -75,9 +84,7 @@ const SecretWorks = () => {
                   <span className="assign-term-title">Term<span className="colon">:</span></span>
                   <span className="">{workTerm}</span>
                 </div>
-                <a href="https://daihuku.xyz" className="work__link" rel="noreferrer noopener" target="_blank">
-                  visit site
-                </a>
+                <RenderLink link={work.link} />
               </div>
             )
           })}
