@@ -7,6 +7,13 @@ body {
   margin: 0
 }
 
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh
+}
+
 .wrapper {
   position: relative;
   display: flex;
@@ -367,28 +374,28 @@ header > .navigation > ul > li > a {
 }
 
 .profile-figure__image {
-  width: 70%
+  width: 100%
 }
 
 .profile__name {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   line-height: 2.2rem;
   margin: 0 0 20px 0
 }
 
 .colon.job {
-  margin-left: 34px
+  margin-left: 38px
 }
 
 .profile__job {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   line-height: 2.2rem;
   margin: 0 0 20px 0
 }
 
 .profile__email {
   display: flex;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   line-height: 2.2rem;
   margin: 0 0 20px 0
 }
@@ -399,13 +406,13 @@ header > .navigation > ul > li > a {
 
 .profile__skill {
   display: flex;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   line-height: 2.2rem;
-  margin: 0 0 60px 0
+  margin: 0 0 100px 0
 }
 
 .colon.skill {
-  margin-left: 30px
+  margin-left: 34px
 }
 
 .skill-list {
@@ -423,10 +430,10 @@ header > .navigation > ul > li > a {
   content: '/';
   margin: 0 3px 0 6px
 }
-linear
+
 .biography-title {
   border-bottom: 1px solid white;
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   margin-bottom: 30px;
   padding-bottom: 1px
 }
@@ -435,13 +442,14 @@ linear
   font-size: 1.5rem
 }
 
-.profile__biography > p {
+.profile__biography > div > p {
+  letter-spacing: 2px;
   line-height: 2.2rem;
   margin: 0;
   padding: 0
 }
 
-.profile__biography > p:not(:last-child) {
+.profile__biography > div > p:not(:last-child) {
   margin-bottom: 30px
 }
 
@@ -479,7 +487,7 @@ linear
   .profile__skill {
     font-size: 1.5rem;
     line-height: 2.5rem;
-    margin-bottom: 50px
+    margin-bottom: 100px
   }
 
   .colon.skill {
@@ -487,16 +495,17 @@ linear
   }
 
   .biography-title {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-bottom: 20px
   }
   
-  .profile__biography > p {
+  .profile__biography > div > p {
     font-size: 1.2rem;
+    letter-spacing: 2px;
     line-height: 2rem
   }
  
-  .profile__biography > p:not(:last-child) {
+  .profile__biography > div > p:not(:last-child) {
     margin-bottom: 20px;
   }
 }
@@ -553,7 +562,7 @@ linear
     margin-left: 24px
   }
   
-  .profile__biography > p {
+  .profile__biography > div > p {
     font-size: 1.1rem;
     line-height: 1.9rem;
   }

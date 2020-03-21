@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import Helmet from 'react-helmet';
+import Loading from './Loading';
 import Menu from './Menu';
 import Footer from './Footer';
 
 const SecretWorks = () => {
+  const [loading, setLoading] = useState(true);
   const [works, setWorks] = useState([]);
 
   useEffect(() => {
+    let cleanedUp = false;
     const url = new URL(process.env.REACT_APP_MICRO_CMS_API_URL);
     url.pathname = '/api/v1/secret-works'
     fetch(url, {
@@ -15,10 +18,20 @@ const SecretWorks = () => {
       },
     })
     .then(res => res.json())
-    .then(res => setWorks(res.contents))
+    .then(res => {
+      if (!cleanedUp) {
+        setWorks(res.contents);
+      }
+    })
     .catch(error => {
       console.log(error)
     })
+    .then(() => setTimeout(() => setLoading(false), 1000));
+
+    const cleanup = () => {
+      cleanedUp = true;
+    };
+    return cleanup;
   }, []);
 
   const RenderLink = ({link}) => {
@@ -29,6 +42,8 @@ const SecretWorks = () => {
       </a>
     );
   };
+
+  if (loading) return <Loading loading={loading} />
 
   return (
     <>

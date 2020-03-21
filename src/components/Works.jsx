@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import Helmet from 'react-helmet';
 import useReactRouter from 'use-react-router';
+import Loading from './Loading';
 import Menu from './Menu';
 import Footer from './Footer';
 
 const Works = () => {
   const { history } = useReactRouter();
+  const [loading, setLoading] = useState(true);
   const [works, setWorks] = useState([]);
   const [password, setPassword] = useState('');
 
   useEffect(() => {
+    let cleanedUp = false;
     const url = new URL(process.env.REACT_APP_MICRO_CMS_API_URL);
     url.pathname = '/api/v1/works'
     fetch(url, {
@@ -18,10 +21,20 @@ const Works = () => {
       },
     })
     .then(res => res.json())
-    .then(res => setWorks(res.contents))
+    .then(res => {
+      if (!cleanedUp) {
+        setWorks(res.contents)
+      }
+    })
     .catch(error => {
       console.log(error)
     })
+    .then(() => setTimeout(() => setLoading(false), 1000));
+
+    const cleanup = () => {
+      cleanedUp = true;
+    };
+    return cleanup;
   }, []);
 
   const RenderLink = ({link}) => {
@@ -37,6 +50,8 @@ const Works = () => {
     e.preventDefault();
     history.push('works/' + password);
   };
+
+  if (loading) return <Loading loading={loading} />
 
   return (
     <>
