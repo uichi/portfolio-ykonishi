@@ -9,12 +9,6 @@ import {
 } from 'react-spring'
 import 'normalize-css'
 
-const Button = styled.button`
-  position: fixed;
-  top: 30px;
-  right: 30px;
-  z-index: 2;
-`
 const Nav = styled(animated.nav)`
   background: ghostwhite;
   height: 100vh;
@@ -87,7 +81,13 @@ const Menu = () => {
 
   return (
     <>
-      <Button onClick={toggleMenu}>Toggle Menu</Button>
+      <div className="humberger-menu">
+        <a class={ showMenu ? "humberger-menu__trigger active" : "humberger-menu__trigger" } onClick={toggleMenu}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
       <Nav className="menu" style={springProps}>
         <ul>
           {liTransitions.map(({ item, key, props }) => (
