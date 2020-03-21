@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Helmet from 'react-helmet';
+import Loading from './Loading';
 import Menu from './Menu';
 import Footer from './Footer';
 
 const Profile = () => {
+  const [loading, setLoading] = useState(true)
   const [profile, setProfile] = useState({
     image: '',
     name: '',
@@ -14,6 +16,7 @@ const Profile = () => {
   });
 
   useEffect(() => {
+    let cleanedUp = false;
     const url = new URL(process.env.REACT_APP_MICRO_CMS_API_URL);
     url.pathname = '/api/v1/profile'
     fetch(url, {
@@ -22,11 +25,21 @@ const Profile = () => {
       },
     })
     .then(res => res.json())
-    .then(res => setProfile(res))
+    .then(res => {
+      if (!cleanedUp) setProfile(res)
+    })
     .catch(error => {
       console.log(error)
     })
+    .then(() => setTimeout(() => setLoading(false), 1000));
+
+    const cleanup = () => {
+      cleanedUp = true;
+    };
+    return cleanup;
   }, []);
+
+  if (loading) return <Loading loading={loading} />
 
   return (
     <>
