@@ -14,6 +14,79 @@ body {
   height: 100vh
 }
 
+/* humberger menu */
+
+.humberger-menu {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  z-index: 2;
+}
+
+.humberger-menu__trigger,
+.humberger-menu__trigger span {
+  display: inline-block;
+  transition: all .8s;
+  box-sizing: border-box;
+}
+.humberger-menu__trigger {
+  position: relative;
+  transform: scale(0.8);
+  width: 50px;
+  height: 44px;
+}
+.humberger-menu__trigger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+.humberger-menu__trigger span:nth-of-type(1) {
+  top: 0;
+}
+.humberger-menu__trigger span:nth-of-type(2) {
+  top: 20px;
+}
+.humberger-menu__trigger span:nth-of-type(3) {
+  bottom: 0;
+}
+
+.humberger-menu__trigger.active span {
+  background-color: #111;
+}
+
+.humberger-menu__trigger.active span:nth-of-type(1) {
+  -webkit-transform: translateY(20px) rotate(-45deg);
+  transform: translateY(20px) rotate(-45deg);
+}
+.humberger-menu__trigger.active span:nth-of-type(2) {
+  opacity: 0;
+}
+.humberger-menu__trigger.active span:nth-of-type(3) {
+  -webkit-transform: translateY(-20px) rotate(45deg);
+  transform: translateY(-20px) rotate(45deg);
+}
+
+@media( max-width: 768px ) {
+  .humberger-menu {
+    top: 15px;
+    right: 15px;
+  }
+}
+
+@media( max-width: 425px ) {
+  .humberger-menu {
+    top: 5px;
+    right: 5px;
+  }
+
+  .humberger-menu__trigger {
+    transform: scale(0.6);
+  }
+}
+
 .wrapper {
   position: relative;
   display: flex;
@@ -128,6 +201,7 @@ header > .navigation > ul > li > a {
 .work__title {
   font-size: 3rem;
   letter-spacing: 0.2rem;
+  line-height: 40px;
   margin: 0 0 20px 0;
   padding: 0;
 }
@@ -278,7 +352,6 @@ header > .navigation > ul > li > a {
 
   .work__title {
     font-size: 2.4rem;
-    line-height: 1.7rem;
     margin-bottom: 25px
   }
   

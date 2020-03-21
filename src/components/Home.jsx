@@ -14,9 +14,6 @@ const Home = () => {
           <nav className="navigation">
             <ul className="navigation__list list">
               <li className="list__item">
-                <Link className="glitch" data-text="Home" to="/">Home</Link>
-                </li>
-              <li className="list__item">
                 <Link className="glitch" data-text="Profile" to="/profile">Profile</Link>
               </li>
               <li className="list__item">
