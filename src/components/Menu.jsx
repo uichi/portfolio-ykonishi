@@ -18,6 +18,7 @@ const Nav = styled(animated.nav)`
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1;
 
   ul {
     margin: 0;
