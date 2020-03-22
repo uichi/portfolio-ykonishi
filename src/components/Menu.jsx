@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react'
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import {
   animated,
@@ -84,11 +85,11 @@ const Menu = () => {
   return (
     <>
       <div className="humberger-menu">
-        <a class={ showMenu ? "humberger-menu__trigger active" : "humberger-menu__trigger" } onClick={toggleMenu}>
+        <Link href="#" class={ showMenu ? "humberger-menu__trigger active" : "humberger-menu__trigger" } onClick={toggleMenu}>
           <span></span>
           <span></span>
           <span></span>
-        </a>
+        </Link>
       </div>
       <Nav className="menu" style={springProps}>
         <ul>
