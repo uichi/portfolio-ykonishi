@@ -42,7 +42,8 @@ const Li = styled(animated.li)`
 const menuItems = [
   { name: 'Home', link: '/' },
   { name: 'Profile', link: '/profile' },
-  { name: 'Works', link: '/works' }
+  { name: 'Works', link: '/works' },
+  { name: 'Contact', link: '/contact' }
 ];
 
 const Menu = () => {

@@ -645,6 +645,18 @@ header > .navigation > ul > li > a {
   }
 }
 
+/* Contact */
+
+.contact {
+  margin: 0 auto 100px;
+  width: 80vw;
+  max-width: 768px
+}
+
+
+
+/* Home menu animation */
+
 @keyframes noise-anim {
   0% {
     clip: rect(3px, 9999px, 22px, 0);

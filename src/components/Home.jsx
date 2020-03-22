@@ -19,7 +19,7 @@ const Home = () => {
               <li className="list__item">
                 <Link className="glitch" data-text="Works" to="/works">Works</Link>
                 </li>
-              <li className="list__item"><a className="glitch" data-text="Contact" href="./contact.html">Contact</a></li>
+              <li className="list__item"><a className="glitch" data-text="Contact" href="./contact">Contact</a></li>
             </ul>
           </nav>
         </header>
