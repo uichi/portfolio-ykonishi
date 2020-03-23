@@ -12,14 +12,16 @@ const Home = () => {
       <div className="wrapper">
         <header>
           <nav className="navigation">
-            <ul className="navigation__list list">
+            <ul className="navigation__list">
               <li className="list__item">
                 <Link className="glitch" data-text="Profile" to="/profile">Profile</Link>
               </li>
               <li className="list__item">
                 <Link className="glitch" data-text="Works" to="/works">Works</Link>
-                </li>
-              <li className="list__item"><a className="glitch" data-text="Contact" href="./contact">Contact</a></li>
+              </li>
+              <li className="list__item">
+                <Link className="glitch" data-text="Contact" to="/contact">Contact</Link>
+              </li>
             </ul>
           </nav>
         </header>

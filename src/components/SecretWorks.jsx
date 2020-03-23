@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Helmet from 'react-helmet';
+import useReactRouter from 'use-react-router';
 import Loading from './Loading';
 import Menu from './Menu';
 import Footer from './Footer';
 
-const SecretWorks = () => {
+const SecretWorks = (props) => {
+  const { history } = useReactRouter();
   const [loading, setLoading] = useState(true);
   const [works, setWorks] = useState([]);
 
@@ -32,23 +34,14 @@ const SecretWorks = () => {
       cleanedUp = true;
     };
     return cleanup;
-  }, []);
-
-  const RenderLink = ({link}) => {
-    if (!link) return <></>;
-    return (
-      <a href={link} className="work__link" rel="noreferrer noopener" target="_blank">
-        visit site
-      </a>
-    );
-  };
+  }, [props]);
 
   if (loading) return <Loading loading={loading} />
 
   return (
     <>
       <Helmet>
-        <title>Works | Yuichi Konishi</title>
+        <title>Secret Works | Yuichi Konishi</title>
       </Helmet>
       <div className="wrapper">
         <Menu />
@@ -99,7 +92,9 @@ const SecretWorks = () => {
                   <span className="assign-term-title">Term<span className="colon">:</span></span>
                   <span className="">{workTerm}</span>
                 </div>
-                <RenderLink link={work.link} />
+                <div className="work__link" onClick={() => history.push(`/secret-works/${work.id}`)}>
+                  Detail
+                </div>
               </div>
             )
           })}

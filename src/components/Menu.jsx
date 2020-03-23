@@ -85,7 +85,7 @@ const Menu = () => {
   return (
     <>
       <div className="humberger-menu">
-        <Link href="#" class={ showMenu ? "humberger-menu__trigger active" : "humberger-menu__trigger" } onClick={toggleMenu}>
+        <Link to="#" className={ showMenu ? "humberger-menu__trigger active" : "humberger-menu__trigger" } onClick={toggleMenu}>
           <span></span>
           <span></span>
           <span></span>
@@ -95,7 +95,7 @@ const Menu = () => {
         <ul>
           {liTransitions.map(({ item, key, props }) => (
             <Li key={key} style={props}>
-              <a href={item.link}>{item.name}</a>
+              <Link to={item.link}>{item.name}</Link>
             </Li>
           ))}
         </ul>

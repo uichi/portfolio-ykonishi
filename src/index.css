@@ -2,7 +2,7 @@
 @import url('https://webfont.fontplus.jp/accessor/script/fontplus.js?2w-6zNXByho%3D&box=PVMVfVVQKGw%3D&aa=1&ab=2');
 
 body {
-  font-family: 'FOT-筑紫オールドゴシック Std B';
+  font-family: "FOT-UD角ゴ_スモール Pr6N E";
   background: #111;
   color: #efefef;
   margin: 0
@@ -141,49 +141,49 @@ body {
   }
 }
 
-header > .navigation {
+.navigation {
   position: absolute;
   font-size: 3rem;
   right: 70px;
   bottom: 70px
 }
 
-header > .navigation > ul {
+.navigation__list {
   list-style: none;
   margin: 0;
   padding: 0
 }
 
-header > .navigation > ul > li {
+.navigation__list > .list__item {
   position: relative;
   line-height: 3.5rem
 }
 
-header > .navigation > ul > li > a {
+.navigation__list > .list__item > a {
   color: #efefef;
   text-decoration: none
 }
 
 @media( max-width: 768px ) {
-  header > .navigation {
+  .navigation {
     font-size: 2.5rem;
     right: 60px;
     bottom: 60px
   }
 
-  header > .navigation > ul > li {
+  .navigation__list > .list__item {
     line-height: 3rem
   }
 }
 
 @media( max-width: 425px ) {
-  header > .navigation {
+  .navigation {
     font-size: 2.3rem;
     right: 10px;
     bottom: 50px
   }
 
-  header > .navigation > ul > li {
+  .navigation__list > .list__item {
     line-height: 2.8rem
   }
 }
@@ -319,6 +319,10 @@ header > .navigation > ul > li > a {
   padding-top: 10px;
   padding-bottom: 10px;
   margin: 0 0 20px 0;
+}
+
+.work__link:hover {
+  cursor: pointer
 }
 
 .work__link:before{
@@ -467,6 +471,61 @@ header > .navigation > ul > li > a {
 
   .work__link {
     font-size: 1rem
+  }
+}
+
+/* Work */
+.work-detail {
+  margin: 0 auto 100px;
+  width: 80vw;
+  max-width: 768px
+}
+
+.work__description {
+  margin: 50px 0 53px
+}
+
+.work-description__title {
+  border-bottom: 1px solid white;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  padding-bottom: 1px;
+}
+
+.work__description > div > p {
+  font-size: 1.56rem;
+  line-height: 1.8rem;
+  text-align: justify;
+  margin: 0;
+  padding: 0;
+}
+
+@media( max-width: 768px ) {
+  .work__description {
+    margin: 40px 0 43px
+  }
+
+  .work-description__title {
+    font-size: 1.8rem;
+    margin-bottom: 20px
+  }
+  
+  .work__description > div > p {
+    font-size: 1.35rem;
+    letter-spacing: 2px;
+    line-height: 2rem
+  }
+}
+
+@media( max-width: 425px ) {
+  .work__description {
+    margin: 20px 0 23px
+  }
+
+  .work__description > div > p {
+    font-size: 1.1rem;
+    letter-spacing: 0.2rem;
+    line-height: 1.7rem
   }
 }
 
