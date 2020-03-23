@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Helmet from 'react-helmet';
+import queryString from 'query-string';
 import useReactRouter from 'use-react-router';
 import Loading from './Loading';
 import Menu from './Menu';
@@ -12,23 +13,28 @@ const SecretWorks = (props) => {
 
   useEffect(() => {
     let cleanedUp = false;
+    const query = queryString.parse(props.location.search);
     const url = new URL(process.env.REACT_APP_MICRO_CMS_API_URL);
     url.pathname = '/api/v1/secret-works'
-    fetch(url, {
-      headers: {
-        'X-API-KEY': process.env.REACT_APP_MICRO_CMS_API_KEY
-      },
-    })
-    .then(res => res.json())
-    .then(res => {
-      if (!cleanedUp) {
-        setWorks(res.contents);
-      }
-    })
-    .catch(error => {
-      console.log(error)
-    })
-    .then(() => setTimeout(() => setLoading(false), 1000));
+    if ( query.password === process.env.REACT_APP_SECRET_WORKS_KEY ) {
+      fetch(url, {
+        headers: {
+          'X-API-KEY': process.env.REACT_APP_MICRO_CMS_API_KEY
+        },
+      })
+      .then(res => res.json())
+      .then(res => {
+        if (!cleanedUp) {
+          setWorks(res.contents);
+        }
+      })
+      .catch(error => {
+        console.log(error)
+      })
+      .then(() => setTimeout(() => setLoading(false), 1000));
+    } else {
+      setLoading(false)
+    }
 
     const cleanup = () => {
       cleanedUp = true;
