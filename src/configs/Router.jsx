@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import ScrollToTop from '../components/ScrollToTop';
 import Home from '../components/Home';
 import Profile from '../components/Profile';
 import Works from '../components/Works';
@@ -12,6 +13,7 @@ import NotFoundPage from '../components/NotFoundPage';
 const Router = () => {
   return (
     <BrowserRouter>
+      <Route component={ScrollToTop} />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/profile" component={Profile} />
