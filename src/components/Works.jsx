@@ -37,18 +37,10 @@ const Works = () => {
     return cleanup;
   }, []);
 
-  const RenderLink = ({link}) => {
-    if (!link) return <></>;
-    return (
-      <a href={link} className="work__link" rel="noreferrer noopener" target="_blank">
-        visit site
-      </a>
-    );
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    history.push('works/' + password);
+    if (password !== process.env.REACT_APP_SECRET_WORKS_KEY) return;
+    history.push('secret-works/');
   };
 
   if (loading) return <Loading loading={loading} />
@@ -65,6 +57,8 @@ const Works = () => {
         </header>
         <main className="main works">
           {works.map((work, index) => {
+            const url = new URL(process.env.REACT_APP_MICRO_CMS_API_URL);
+            url.pathname = `/api/v1/works${work.id}`
             // Shape the date.
             const startDateObject = new Date(work.startDate);
             let workTerm = startDateObject.getFullYear() + ' / ' +
@@ -107,7 +101,9 @@ const Works = () => {
                   <span className="assign-term-title">Term<span className="colon">:</span></span>
                   <span className="">{workTerm}</span>
                 </div>
-                <RenderLink link={work.link} />
+                <div className="work__link" onClick={() => history.push(`/works/${work.id}`)}>
+                  Detail
+                </div>
               </div>
             )
           })}
