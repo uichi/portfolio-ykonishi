@@ -45,73 +45,69 @@ const WorkDetail = (props) => {
 
   if (loading) return <Loading loading={loading} />
 
-  if (!!work) {
-    // Shape the date.
-    const startDateObject = new Date(work.startDate);
-    let workTerm = startDateObject.getFullYear() + ' / ' +
-    ('0' + (startDateObject.getMonth() + 1)).slice(-2) + ' / ' +
-    ('0' + startDateObject.getDate()).slice(-2) + ' ~ ';
-    if(!!work.endDate) {
-      const endDateObject = new Date(work.startDate);
-      workTerm = workTerm +
-      endDateObject.getFullYear() + ' / ' +
-      ('0' + (endDateObject.getMonth() + 1)).slice(-2) + ' / ' +
-      ('0' + endDateObject.getDate()).slice(-2);
-    }
-    return (
-      <>
-        <Helmet>
-          <title>Work | Yuichi Konishi</title>
-        </Helmet>
-        <div className="wrapper">
-          <header>
-            <h1 className="page-title">{work.name}</h1>
-          </header>
-          <Menu />
-          <div className="work-detail">
-            <figure className="work__figure">
-              <img src={work.image.url} className="work__image" alt="実績の画像" />
-            </figure>
-            <div className="work__role">
-              <span className="role-title">Role<span className="colon">:</span></span>
-              <ul className="role-list">
-                {work.roles.map((role, index) => {
-                  return (
-                    <li key={index} className="role-list__item">{role.name}</li>
-                  )
-                })}
-              </ul>
-            </div>
-            <div className="work__technologies">
-              <span className="technology-title">Tech<span className="colon">:</span></span>
-              <ul className="technology-list">
-                {work.technologies.map((technology, index) => {
-                  return (
-                    <li key={index} className="technology-list__item">{technology.name}</li>
-                  )
-                })}
-              </ul>
-            </div>
-            <div className="work__assign-term">
-              <span className="assign-term-title">Term<span className="colon">:</span></span>
-              <span className="">{workTerm}</span>
-            </div>
-            <div className="work__description work-description">
-              <div className="work-description__title">Detail</div>
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: work.description
-                  }}
-                />
-            </div>
-            <RenderLink link={work.link} />
-          </div>
-        </div>
-        <Footer />
-      </>
-    );
+  // Shape the date.
+  const startDateObject = new Date(work.startDate);
+  let workTerm = startDateObject.getFullYear() + ' / ' +
+  ('0' + (startDateObject.getMonth() + 1)).slice(-2) + ' / ' +
+  ('0' + startDateObject.getDate()).slice(-2) + ' ~ ';
+  if(!!work.endDate) {
+    const endDateObject = new Date(work.startDate);
+    workTerm = workTerm +
+    endDateObject.getFullYear() + ' / ' +
+    ('0' + (endDateObject.getMonth() + 1)).slice(-2) + ' / ' +
+    ('0' + endDateObject.getDate()).slice(-2);
   }
-
-  return <></>;
+  return (
+    <>
+      <Helmet>
+        <title>Work | Yuichi Konishi</title>
+      </Helmet>
+      <div className="wrapper">
+        <Menu />
+        <header>
+          <h1 className="page-title">{work.name}</h1>
+        </header>
+        <div className="work-detail">
+          <figure className="work__figure">
+            <img src={work.image.url} className="work__image" alt="実績の画像" />
+          </figure>
+          <div className="work__role">
+            <span className="role-title">Role<span className="colon">:</span></span>
+            <ul className="role-list">
+              {work.roles.map((role, index) => {
+                return (
+                  <li key={index} className="role-list__item">{role.name}</li>
+                )
+              })}
+            </ul>
+          </div>
+          <div className="work__technologies">
+            <span className="technology-title">Tech<span className="colon">:</span></span>
+            <ul className="technology-list">
+              {work.technologies.map((technology, index) => {
+                return (
+                  <li key={index} className="technology-list__item">{technology.name}</li>
+                )
+              })}
+            </ul>
+          </div>
+          <div className="work__assign-term">
+            <span className="assign-term-title">Term<span className="colon">:</span></span>
+            <span className="">{workTerm}</span>
+          </div>
+          <div className="work__description work-description">
+            <div className="work-description__title">Detail</div>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: work.description
+                }}
+              />
+          </div>
+          <RenderLink link={work.link} />
+        </div>
+      </div>
+      <Footer />
+    </>
+  );
 };
 export default WorkDetail;

@@ -85,11 +85,11 @@ const Menu = () => {
   return (
     <>
       <div className="humberger-menu">
-        <Link to="#" className={ showMenu ? "humberger-menu__trigger active" : "humberger-menu__trigger" } onClick={toggleMenu}>
+        <a href="#humberger" className={ showMenu ? "humberger-menu__trigger active" : "humberger-menu__trigger" } onClick={toggleMenu}>
           <span></span>
           <span></span>
           <span></span>
-        </Link>
+        </a>
       </div>
       <Nav className="menu" style={springProps}>
         <ul>
