@@ -40,7 +40,7 @@ const Works = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (password !== process.env.REACT_APP_SECRET_WORKS_KEY) return;
-    history.push('secret-works/');
+    history.push(`secret-works/?password=${process.env.REACT_APP_SECRET_WORKS_KEY}`);
   };
 
   if (loading) return <Loading loading={loading} />
