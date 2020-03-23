@@ -78,7 +78,7 @@ const Works = () => {
                 </figure>
                 <h2 className="work__title">{work.name}</h2>
                 <div className="work__role">
-                  <span className="role-title">Role<span className="colon">:</span></span>
+                  <span className="role-title">Role<span className="colon role">:</span></span>
                   <ul className="role-list">
                     {work.roles.map((role, index) => {
                       return (
