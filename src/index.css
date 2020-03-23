@@ -1,5 +1,5 @@
 body {
-  font-family: 'TsukuGoPro-B';
+  font-family: "FOT-筑紫ゴシック Pro B";
   background: #111;
   color: #efefef;
   margin: 0
@@ -93,33 +93,37 @@ body {
 }
 
 .site-title {
-  font-size: 13rem
+  font-size: 12.6rem
 }
 
 .site-title__first-line {
-  letter-spacing: 0.98rem;
+  letter-spacing: 0.48rem;
+  line-height: 15rem;
   margin: 35px 0 0;
   padding: 0
 }
 
 .site-title__second-line {
-  letter-spacing: 0.9rem;
+  letter-spacing: 0.4rem;
+  line-height: 20rem;
   margin: 0;
   padding: 0
 }
 
 @media(max-width: 768px) {
   .site-title {
-    font-size: 7rem
+    font-size: 6.8rem
   }
 
   .site-title__first-line {
-    letter-spacing: 0.58rem;
+    letter-spacing: 0.38rem;
+    line-height: 8rem;
     margin: 150px 0 0
   }
 
   .site-title__second-line {
-    letter-spacing: 0.5rem
+    letter-spacing: 0.3rem;
+    line-height: 15rem
   }
 }
 
@@ -130,11 +134,13 @@ body {
 
   .site-title__first-line {
     letter-spacing: 0.58rem;
+    line-height: 10rem;
     margin: 100px 0 0;
   }
 
   .site-title__second-line {
     letter-spacing: 0.54rem;
+    line-height: 4rem
   }
 }
 
@@ -175,7 +181,7 @@ body {
 
 @media( max-width: 425px ) {
   .navigation {
-    font-size: 2.3rem;
+    font-size: 2rem;
     right: 10px;
     bottom: 50px
   }
