@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Helmet from 'react-helmet';
+import { Link } from 'react-router-dom';
 import queryString from 'query-string';
 import useReactRouter from 'use-react-router';
 import Loading from './Loading';
@@ -75,7 +76,7 @@ const SecretWorks = (props) => {
                 </figure>
                 <h2 className="work__title">{work.name}</h2>
                 <div className="work__role">
-                  <span className="role-title">Role<span className="colon">:</span></span>
+                  <span className="role-title">Role<span className="colon role">:</span></span>
                   <ul className="role-list">
                     {work.roles.map((role, index) => {
                       return (
@@ -98,9 +99,7 @@ const SecretWorks = (props) => {
                   <span className="assign-term-title">Term<span className="colon">:</span></span>
                   <span className="">{workTerm}</span>
                 </div>
-                <div className="work__link" onClick={() => history.push(`/secret-works/${work.id}`)}>
-                  Detail
-                </div>
+                <Link className="work__link" to={`/secret-works/${work.id}`}>Detail</Link>
               </div>
             )
           })}

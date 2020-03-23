@@ -72,7 +72,7 @@ const SecretWorkDetail = (props) => {
             <img src={work.image.url} className="work__image" alt="実績の画像" />
           </figure>
           <div className="work__role">
-            <span className="role-title">Role<span className="colon">:</span></span>
+            <span className="role-title">Role<span className="colon role">:</span></span>
             <ul className="role-list">
               {work.roles.map((role, index) => {
                 return (

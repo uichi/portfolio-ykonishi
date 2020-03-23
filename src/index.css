@@ -223,7 +223,7 @@ body {
 }
 
 .work {
-  margin-bottom: 100px;
+  margin-bottom: 130px;
 }
 
 .work__figure {
@@ -252,7 +252,7 @@ body {
 }
 
 .colon.role {
-  margin-left: 15px;
+  margin-left: 14px;
 }
 
 .role-title {
@@ -325,7 +325,6 @@ body {
   width: 100%;
   padding-top: 2px;
   padding-bottom: 6px;
-  margin: 0 0 20px 0;
 }
 
 .work__link:hover {
@@ -399,6 +398,10 @@ body {
     margin-bottom: 80px;
   }
 
+  .work {
+    margin-bottom: 100px;
+  }
+
   .work__title {
     font-size: 2.4rem;
     margin-bottom: 25px
@@ -408,6 +411,10 @@ body {
     font-size: 1.1rem;
     line-height: 1.7rem;
     margin-bottom: 10px
+  }
+
+  .colon.role {
+    margin-left: 12px;
   }
 
   .work__technologies {
@@ -423,7 +430,9 @@ body {
   }
 
   .work__link {
-    font-size: 1rem
+    font-size: 1rem;
+    padding-top: 3px;
+    padding-bottom: 7px
   }
 
   .work__link{
@@ -455,6 +464,10 @@ body {
     width: 90vw
   }
 
+  .work {
+    margin-bottom: 80px;
+  }
+
   .work__title {
     font-size: 2rem;
     margin-bottom: 20px
@@ -463,6 +476,10 @@ body {
   .work__role {
     font-size: 1rem;
     line-height: 1.8rem
+  }
+
+  .colon.role {
+    margin-left: 13px;
   }
 
   .work__technologies {
@@ -477,7 +494,9 @@ body {
   }
 
   .work__link {
-    font-size: 1rem
+    font-size: 1rem;
+    padding-top: 10px;
+    padding-bottom: 10px
   }
 }
 

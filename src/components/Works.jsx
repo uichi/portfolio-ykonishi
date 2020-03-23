@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Helmet from 'react-helmet';
+import { Link } from 'react-router-dom';
 import useReactRouter from 'use-react-router';
 import Loading from './Loading';
 import Menu from './Menu';
@@ -101,9 +102,7 @@ const Works = () => {
                   <span className="assign-term-title">Term<span className="colon">:</span></span>
                   <span className="">{workTerm}</span>
                 </div>
-                <div className="work__link" onClick={() => history.push(`/works/${work.id}`)}>
-                  Detail
-                </div>
+                <Link className="work__link" to={`/works/${work.id}`}>Detail</Link>
               </div>
             )
           })}
