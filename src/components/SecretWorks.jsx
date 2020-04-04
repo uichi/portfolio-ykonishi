@@ -61,7 +61,7 @@ const SecretWorks = (props) => {
             ('0' + (startDateObject.getMonth() + 1)).slice(-2) + ' / ' +
             ('0' + startDateObject.getDate()).slice(-2) + ' ~ ';
             if(!!work.endDate) {
-              const endDateObject = new Date(work.startDate);
+              const endDateObject = new Date(work.endDate);
               workTerm = workTerm +
               endDateObject.getFullYear() + ' / ' +
               ('0' + (endDateObject.getMonth() + 1)).slice(-2) + ' / ' +
