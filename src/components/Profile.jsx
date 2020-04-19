@@ -86,6 +86,14 @@ const Profile = () => {
                 }}
               />
             </div>
+            <div className="profile__links">
+              <div className="links-title">Links</div>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: profile.links
+                }}
+              />
+            </div>
           </div>
         </main>
       </div>
