@@ -1,15 +1,17 @@
 body {
-  font-family: "FOT-筑紫ゴシック Pro B";
+  font-family: fot-tsukubrdgothic-std, sans-serif;
+  font-weight: 400;
+  font-style: normal;
   background: #111;
   color: #efefef;
-  margin: 0
+  margin: 0;
 }
 
 .loading {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh
+  height: 100vh;
 }
 
 /* humberger menu */
@@ -24,7 +26,7 @@ body {
 .humberger-menu__trigger,
 .humberger-menu__trigger span {
   display: inline-block;
-  transition: all .8s;
+  transition: all 0.8s;
   box-sizing: border-box;
 }
 .humberger-menu__trigger {
@@ -67,14 +69,14 @@ body {
   transform: translateY(-20px) rotate(45deg);
 }
 
-@media( max-width: 768px ) {
+@media (max-width: 768px) {
   .humberger-menu {
     top: 15px;
     right: 15px;
   }
 }
 
-@media( max-width: 425px ) {
+@media (max-width: 425px) {
   .humberger-menu {
     top: 5px;
     right: 5px;
@@ -89,47 +91,47 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 100vh
+  min-height: 100vh;
 }
 
 .site-title {
-  font-size: 12.6rem
+  font-size: 12.6rem;
 }
 
 .site-title__first-line {
   letter-spacing: 0.48rem;
   line-height: 15rem;
   margin: 35px 0 0;
-  padding: 0
+  padding: 0;
 }
 
 .site-title__second-line {
   letter-spacing: 0.4rem;
   line-height: 20rem;
   margin: 0;
-  padding: 0
+  padding: 0;
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .site-title {
-    font-size: 6.8rem
+    font-size: 6.8rem;
   }
 
   .site-title__first-line {
     letter-spacing: 0.38rem;
     line-height: 8rem;
-    margin: 150px 0 0
+    margin: 150px 0 0;
   }
 
   .site-title__second-line {
     letter-spacing: 0.3rem;
-    line-height: 15rem
+    line-height: 15rem;
   }
 }
 
-@media(max-width: 425px) {
+@media (max-width: 425px) {
   .site-title {
-    font-size: 5rem
+    font-size: 5rem;
   }
 
   .site-title__first-line {
@@ -140,7 +142,7 @@ body {
 
   .site-title__second-line {
     letter-spacing: 0.54rem;
-    line-height: 4rem
+    line-height: 4rem;
   }
 }
 
@@ -148,46 +150,46 @@ body {
   position: absolute;
   font-size: 3rem;
   right: 70px;
-  bottom: 70px
+  bottom: 70px;
 }
 
 .navigation__list {
   list-style: none;
   margin: 0;
-  padding: 0
+  padding: 0;
 }
 
 .navigation__list > .list__item {
   position: relative;
-  line-height: 3.5rem
+  line-height: 3.5rem;
 }
 
 .navigation__list > .list__item > a {
   color: #efefef;
-  text-decoration: none
+  text-decoration: none;
 }
 
-@media( max-width: 768px ) {
+@media (max-width: 768px) {
   .navigation {
     font-size: 2.5rem;
     right: 60px;
-    bottom: 60px
+    bottom: 60px;
   }
 
   .navigation__list > .list__item {
-    line-height: 3rem
+    line-height: 3rem;
   }
 }
 
-@media( max-width: 425px ) {
+@media (max-width: 425px) {
   .navigation {
     font-size: 2rem;
     right: 10px;
-    bottom: 50px
+    bottom: 50px;
   }
 
   .navigation__list > .list__item {
-    line-height: 2.8rem
+    line-height: 2.8rem;
   }
 }
 
@@ -196,30 +198,30 @@ body {
   letter-spacing: 0.7vw;
   text-align: center;
   margin: 5vh 0 8vh 0;
-  padding: 0
+  padding: 0;
 }
 
-@media( max-width: 768px ) {
+@media (max-width: 768px) {
   .page-title {
-    font-size: 4rem
+    font-size: 4rem;
   }
 }
 
 .colon {
-  margin: 0 10px 0
+  margin: 0 10px 0;
 }
 
 .footer {
   font-size: 1rem;
   text-align: center;
-  margin: auto 0 10px
+  margin: auto 0 10px;
 }
 
 /* Works */
 .works {
   margin: 0 auto 0;
   width: 80vw;
-  max-width: 768px
+  max-width: 768px;
 }
 
 .work {
@@ -228,11 +230,11 @@ body {
 
 .work__figure {
   margin: 0 0 3vh 0;
-  padding: 0
+  padding: 0;
 }
 
 .work__image {
-  width: 100%
+  width: 100%;
 }
 
 .work__title {
@@ -248,7 +250,7 @@ body {
   font-size: 1.3rem;
   line-height: 3rem;
   margin: 0 0 1px 0;
-  padding: 0
+  padding: 0;
 }
 
 .colon.role {
@@ -256,30 +258,30 @@ body {
 }
 
 .role-title {
-  letter-spacing: 1.4px
+  letter-spacing: 1.4px;
 }
 
 .role-list {
   list-style: none;
   margin: 0;
-  padding: 0
+  padding: 0;
 }
 
 .role-list__item {
   display: inline-block;
-  letter-spacing: 0.2rem
+  letter-spacing: 0.2rem;
 }
 
 .role-list__item:not(:last-child):after {
-  content: '/';
-  margin: 0 3px 0 6px
+  content: "/";
+  margin: 0 3px 0 6px;
 }
 
 .work__technologies {
   display: flex;
   font-size: 1.3rem;
   line-height: 3rem;
-  margin: 0 0 1px 0
+  margin: 0 0 1px 0;
 }
 
 .technology-title {
@@ -289,27 +291,27 @@ body {
 .technology-list {
   list-style: none;
   margin: 0;
-  padding: 0
+  padding: 0;
 }
 
 .technology-list__item {
   display: inline-block;
-  letter-spacing: 0.1rem
+  letter-spacing: 0.1rem;
 }
 
 .technology-list__item:not(:last-child):after {
-  content: '/';
-  margin: 0 3px 0 6px
+  content: "/";
+  margin: 0 3px 0 6px;
 }
 
 .work__assign-term {
   display: flex;
   font-size: 1.3rem;
   line-height: 3rem;
-  margin: 0 0 30px 0
+  margin: 0 0 30px 0;
 }
 
-.work__link{
+.work__link {
   border: 2px solid white;
   color: white;
   display: inline-block;
@@ -328,10 +330,10 @@ body {
 }
 
 .work__link:hover {
-  cursor: pointer
+  cursor: pointer;
 }
 
-.work__link:before{
+.work__link:before {
   content: "";
   z-index: -1;
   position: absolute;
@@ -345,11 +347,11 @@ body {
   transition: all 0.2s linear;
 }
 
-.work__link:hover{
+.work__link:hover {
   color: royalblue;
 }
 
-.work__link:hover:before{
+.work__link:hover:before {
   left: 0;
 }
 
@@ -393,7 +395,7 @@ body {
   cursor: pointer;
 }
 
-@media( max-width: 768px ) {
+@media (max-width: 768px) {
   .works {
     margin-bottom: 80px;
   }
@@ -404,13 +406,13 @@ body {
 
   .work__title {
     font-size: 2.4rem;
-    margin-bottom: 25px
+    margin-bottom: 25px;
   }
-  
+
   .work__role {
     font-size: 1.1rem;
     line-height: 1.7rem;
-    margin-bottom: 10px
+    margin-bottom: 10px;
   }
 
   .colon.role {
@@ -420,29 +422,29 @@ body {
   .work__technologies {
     font-size: 1.1rem;
     line-height: 2rem;
-    margin-bottom: 10px
+    margin-bottom: 10px;
   }
 
   .work__assign-term {
     font-size: 1.1rem;
     line-height: 2rem;
-    margin-bottom: 40px
+    margin-bottom: 40px;
   }
 
   .work__link {
     font-size: 1rem;
     padding-top: 3px;
-    padding-bottom: 7px
+    padding-bottom: 7px;
   }
 
-  .work__link{
+  .work__link {
     overflow: hidden;
     -webkit-transition: none;
     -o-transition: none;
     transition: none;
   }
 
-  .work__link:before{
+  .work__link:before {
     background-color: white;
     -webkit-transition: none;
     -o-transition: none;
@@ -458,10 +460,10 @@ body {
   }
 }
 
-@media( max-width: 425px ) {
+@media (max-width: 425px) {
   .works {
     margin-bottom: 60px;
-    width: 90vw
+    width: 90vw;
   }
 
   .work {
@@ -470,12 +472,12 @@ body {
 
   .work__title {
     font-size: 2rem;
-    margin-bottom: 20px
+    margin-bottom: 20px;
   }
-  
+
   .work__role {
     font-size: 1rem;
-    line-height: 1.8rem
+    line-height: 1.8rem;
   }
 
   .colon.role {
@@ -484,19 +486,19 @@ body {
 
   .work__technologies {
     font-size: 1rem;
-    line-height: 1.8rem
+    line-height: 1.8rem;
   }
 
   .work__assign-term {
     font-size: 1rem;
     line-height: 1.8rem;
-    margin-bottom: 26px
+    margin-bottom: 26px;
   }
 
   .work__link {
     font-size: 1rem;
     padding-top: 7px;
-    padding-bottom: 12px
+    padding-bottom: 12px;
   }
 }
 
@@ -504,11 +506,11 @@ body {
 .work-detail {
   margin: 0 auto 100px;
   width: 80vw;
-  max-width: 768px
+  max-width: 768px;
 }
 
 .work__description {
-  margin: 50px 0 53px
+  margin: 50px 0 53px;
 }
 
 .work-description__title {
@@ -527,37 +529,45 @@ body {
   padding: 0;
 }
 
-@media( max-width: 768px ) {
+.work-detail a {
+  color: white;
+  letter-spacing: normal;
+}
+
+.work-detail a:hover {
+  color: royalblue;
+}
+
+@media (max-width: 768px) {
   .work__description {
-    margin: 40px 0 43px
+    margin: 40px 0 43px;
   }
 
   .work-description__title {
     font-size: 1.8rem;
-    margin-bottom: 20px
+    margin-bottom: 20px;
   }
-  
+
   .work__description > div > p {
     font-size: 1.05rem;
     letter-spacing: 0.13rem;
-    line-height: 2rem
+    line-height: 2rem;
   }
 }
 
-@media( max-width: 425px ) {
-
+@media (max-width: 425px) {
   .work-detail {
     margin-bottom: 60px;
-    width: 90vw
+    width: 90vw;
   }
-  
+
   .work__description {
-    margin: 20px 0 23px
+    margin: 20px 0 23px;
   }
 
   .work__description > div > p {
     font-size: 1.02rem;
-    line-height: 1.9rem
+    line-height: 1.9rem;
   }
 }
 
@@ -566,83 +576,83 @@ body {
 .profile {
   margin: 0 auto 100px;
   width: 80vw;
-  max-width: 768px
+  max-width: 768px;
 }
 
 .profile-figure {
   text-align: center;
   margin: 0 0 3vh 0;
-  padding: 0
+  padding: 0;
 }
 
 .profile-figure__image {
-  width: 100%
+  width: 100%;
 }
 
 .profile__name {
   font-size: 1.3rem;
   line-height: 2.2rem;
-  margin: 0 0 20px 0
+  margin: 0 0 20px 0;
 }
 
 .colon.job {
-  margin-left: 32px
+  margin-left: 32px;
 }
 
 .profile__job {
   font-size: 1.3rem;
   line-height: 2.2rem;
-  margin: 0 0 20px 0
+  margin: 0 0 20px 0;
 }
 
 .profile__email {
   display: flex;
   font-size: 1.3rem;
   line-height: 2.2rem;
-  margin: 0 0 20px 0
+  margin: 0 0 20px 0;
 }
 
 .colon.email {
-  margin-left: 15px
+  margin-left: 15px;
 }
 
 .profile__skill {
   display: flex;
   font-size: 1.3rem;
   line-height: 2.8rem;
-  margin: 0 0 100px 0
+  margin: 0 0 100px 0;
 }
 
 .colon.skill {
-  margin-left: 27px
+  margin-left: 27px;
 }
 
 .skill-list {
   list-style: none;
   letter-spacing: 0.1rem;
   margin: 0;
-  padding: 0
+  padding: 0;
 }
 
 .skill-list__item {
-  display: inline-block
+  display: inline-block;
 }
 
 .skill-list__item:not(:last-child):after {
-  content: '/';
-  margin: 0 3px 0 6px
+  content: "/";
+  margin: 0 3px 0 6px;
 }
 
 .biography-title {
   border-bottom: 1px solid white;
   font-size: 2.5rem;
   margin-bottom: 30px;
-  padding-bottom: 1px
+  padding-bottom: 1px;
 }
 
 .profile__biography {
   font-size: 1.5rem;
-  margin: 0 0 100px 0
+  margin: 0 0 100px 0;
 }
 
 .profile__biography > div > p {
@@ -651,22 +661,22 @@ body {
   line-height: 2.1rem;
   text-align: justify;
   margin: 0;
-  padding: 0
+  padding: 0;
 }
 
 .profile__biography > div > p:not(:last-child) {
-  margin-bottom: 30px
+  margin-bottom: 30px;
 }
 
 .links-title {
   border-bottom: 1px solid white;
   font-size: 2.5rem;
   margin-bottom: 30px;
-  padding-bottom: 1px
+  padding-bottom: 1px;
 }
 
 .profile__links {
-  font-size: 1.5rem
+  font-size: 1.5rem;
 }
 
 .profile__links > div > p {
@@ -675,7 +685,7 @@ body {
   line-height: 2.1rem;
   text-align: left;
   margin: 0;
-  padding: 0
+  padding: 0;
 }
 
 .profile__links > div > p > a {
@@ -685,71 +695,70 @@ body {
 }
 
 .profile__links > div > p > a:hover {
-  color: royalblue
+  color: royalblue;
 }
 
 .profile__links > div > p:not(:last-child) {
-  margin-bottom: 30px
+  margin-bottom: 30px;
 }
 
-
-@media( max-width: 768px ) {
+@media (max-width: 768px) {
   .profile {
-    margin-bottom: 80px
+    margin-bottom: 80px;
   }
 
   .profile__name {
     font-size: 1.1rem;
     line-height: 2.5rem;
-    margin: 0 0 10px 0
+    margin: 0 0 10px 0;
   }
 
   .colon.email {
-    margin-left: 15px
+    margin-left: 15px;
   }
-  
+
   .profile__job {
     font-size: 1.1rem;
     line-height: 2.5rem;
-    margin: 0 0 10px 0
+    margin: 0 0 10px 0;
   }
 
   .colon.job {
-    margin-left: 29px
+    margin-left: 29px;
   }
 
   .profile__email {
     font-size: 1.1rem;
     line-height: 2.5rem;
-    margin: 0 0 10px 0
+    margin: 0 0 10px 0;
   }
-  
+
   .profile__skill {
     font-size: 1.1rem;
     line-height: 2.5rem;
-    margin-bottom: 100px
+    margin-bottom: 100px;
   }
 
   .colon.skill {
-    margin-left: 26px
+    margin-left: 26px;
   }
 
   .biography-title {
     font-size: 1.8rem;
-    margin-bottom: 20px
+    margin-bottom: 20px;
   }
-  
+
   .profile__biography > div > p {
     font-size: 1.05rem;
     letter-spacing: 0.13rem;
-    line-height: 2rem
+    line-height: 2rem;
   }
 
   .links-title {
     font-size: 1.8rem;
-    margin-bottom: 20px
+    margin-bottom: 20px;
   }
- 
+
   .profile__biography > div > p:not(:last-child) {
     margin-bottom: 20px;
   }
@@ -757,7 +766,7 @@ body {
   .profile__links > div > p {
     font-size: 1.05rem;
     letter-spacing: 0.13rem;
-    line-height: 2rem
+    line-height: 2rem;
   }
 
   .profile__links > div > p:not(:last-child) {
@@ -765,65 +774,64 @@ body {
   }
 }
 
-@media( max-width: 425px ) {
-
+@media (max-width: 425px) {
   .profile {
     margin-bottom: 60px;
-    width: 90vw
+    width: 90vw;
   }
 
   .profile-figure__image {
-    width: 100%
+    width: 100%;
   }
 
   .profile__name {
     font-size: 1.02rem;
     line-height: 1.9rem;
-    margin: 0 0 10px 0
+    margin: 0 0 10px 0;
   }
-  
+
   .profile__job {
     font-size: 1.02rem;
     line-height: 1.9rem;
-    margin: 0 0 10px 0
+    margin: 0 0 10px 0;
   }
 
   .colon.job {
-    margin-left: 27px
+    margin-left: 27px;
   }
 
   .profile__email {
     display: flex;
     font-size: 1.02rem;
     line-height: 1.9rem;
-    margin: 0 0 10px 0
+    margin: 0 0 10px 0;
   }
 
   .colon.email {
-    margin-left: 14px
+    margin-left: 14px;
   }
-  
+
   .profile__skill {
     font-size: 1.02rem;
     line-height: 1.9rem;
-    margin: 0 0 40px 0
+    margin: 0 0 40px 0;
   }
-  
+
   .colon.skill {
-    margin-left: 24px
+    margin-left: 24px;
   }
 
   .profile__biography {
-    margin-bottom: 40px
+    margin-bottom: 40px;
   }
-  
+
   .profile__biography > div > p {
     font-size: 1.02rem;
     line-height: 1.9rem;
   }
 
   .profile__biography > p:not(:last-child) {
-    margin-bottom: 20px
+    margin-bottom: 20px;
   }
 
   .profile__links > div > p {
@@ -832,7 +840,7 @@ body {
   }
 
   .profile__links > p:not(:last-child) {
-    margin-bottom: 20px
+    margin-bottom: 20px;
   }
 }
 
@@ -841,18 +849,18 @@ body {
 .contact {
   margin: 0 auto 100px;
   width: 80vw;
-  max-width: 768px
+  max-width: 768px;
 }
 
 .contact-form > label {
   display: block;
   color: white;
-  font-size: 1.1rem
+  font-size: 1.1rem;
 }
 
 .required-attention {
   font-size: 0.86rem;
-  margin-left: 5px
+  margin-left: 5px;
 }
 
 .contact-form__input {
@@ -863,7 +871,7 @@ body {
   outline: none;
   width: 100%;
   height: 40px;
-  margin: 5px 0 30px
+  margin: 5px 0 30px;
 }
 
 .contact-form__textarea {
@@ -875,49 +883,49 @@ body {
   width: 100%;
   height: 200px;
   margin: 5px 0 20px;
-  padding: 10px
+  padding: 10px;
 }
 
 .contact-form__submit {
-  background:royalblue;
+  background: royalblue;
   border: none;
   border-radius: 0;
   color: #fff;
   float: right;
   outline: none;
   height: 50px;
-  width: 180px
+  width: 180px;
 }
 
-@media( max-width: 425px ) {
+@media (max-width: 425px) {
   .contact {
     margin-bottom: 60px;
-    width: 90vw
+    width: 90vw;
   }
 
   .contact-form > label {
-    font-size: 1rem
+    font-size: 1rem;
   }
 
   .required-attention {
     font-size: 0.8rem;
-    margin-left: 5px
+    margin-left: 5px;
   }
 
   .contact-form__input {
     height: 40px;
-    margin-bottom: 20px
+    margin-bottom: 20px;
   }
 
   .contact-form__textarea {
     height: 250px;
     margin-bottom: 20px;
-    padding: 5px
+    padding: 5px;
   }
 
   .contact-form__submit {
     height: 50px;
-    width: 120px
+    width: 120px;
   }
 }
 
