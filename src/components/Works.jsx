@@ -10,7 +10,6 @@ const Works = () => {
   const { history } = useReactRouter();
   const [loading, setLoading] = useState(true);
   const [works, setWorks] = useState([]);
-  const [password, setPassword] = useState('');
 
   useEffect(() => {
     let cleanedUp = false;
@@ -37,12 +36,6 @@ const Works = () => {
     };
     return cleanup;
   }, []);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (password !== process.env.REACT_APP_SECRET_WORKS_KEY) return;
-    history.push(`secret-works/?password=${process.env.REACT_APP_SECRET_WORKS_KEY}`);
-  };
 
   if (loading) return <Loading loading={loading} />
 
@@ -106,13 +99,6 @@ const Works = () => {
               </div>
             )
           })}
-          <form className="secret-works-form" onSubmit={handleSubmit}>
-            <h2 className="secret-works-form__title">業務実績を閲覧する</h2>
-            <div className="input-field">
-              <input className="input-field__password" type="text" placeholder="パスワードを入力" onChange={ e => setPassword(e.target.value) } />
-              <button className="input-field__button" type="submit">送信</button>
-            </div>
-          </form>
         </main>
       </div>
       <Footer />

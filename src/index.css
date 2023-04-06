@@ -355,46 +355,6 @@ body {
   left: 0;
 }
 
-.secret-works-form {
-  margin: 0 0 50px 0;
-}
-
-.secret-works-form__title {
-  margin: 0 0 20px 0;
-}
-
-.input-field {
-  display: flex;
-}
-
-.input-field__password {
-  background: white;
-  border: none;
-  border-radius: 0;
-  height: 50px;
-  outline: none;
-  padding: 0 0 0 10px;
-  width: 80%;
-}
-
-.input-field__password::placeholder {
-  font-size: 0.8rem;
-}
-
-.input-field__button {
-  background: royalblue;
-  border: none;
-  border-radius: 0;
-  color: #fff;
-  outline: none;
-  height: 50px;
-  width: 20%;
-}
-
-.input-field__button:hover {
-  cursor: pointer;
-}
-
 @media (max-width: 768px) {
   .works {
     margin-bottom: 80px;
@@ -449,14 +409,6 @@ body {
     -webkit-transition: none;
     -o-transition: none;
     transition: none;
-  }
-
-  .input-field__password {
-    font-size: 1rem;
-  }
-
-  .input-field__button {
-    font-size: 1rem;
   }
 }
 
