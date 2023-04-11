@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Helmet from 'react-helmet';
 import { Link } from 'react-router-dom';
-import useReactRouter from 'use-react-router';
 import Loading from './Loading';
 import Menu from './Menu';
 import Footer from './Footer';
 
 const Works = () => {
-  const { history } = useReactRouter();
   const [loading, setLoading] = useState(true);
   const [works, setWorks] = useState([]);
 
